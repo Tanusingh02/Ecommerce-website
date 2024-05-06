@@ -26,8 +26,8 @@ class Product(models.Model):
     slug = models.SlugField(unique=True)
     Category = models.ForeignKey(Category,on_delete=models.CASCADE)
     image = models.ImageField(upload_to="products")
-    marked_price = models.PositiveBigIntegerField()
-    selling_price = models.PositiveBigIntegerField()
+    marked_price = models.PositiveIntegerField()
+    selling_price = models.PositiveIntegerField()
     description = models.TextField()
     view_count = models.PositiveIntegerField(default=0)
     
@@ -49,7 +49,7 @@ class CartProduct(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     rate=models.PositiveIntegerField()
     quantity = models.PositiveIntegerField()
-    subtotal = models.PositiveBigIntegerField()
+    subtotal = models.PositiveIntegerField()
     
     def __str__(self):
         return "Cart:" +str(self.cart.id) + "CartProduct:" + str(self.id) 
