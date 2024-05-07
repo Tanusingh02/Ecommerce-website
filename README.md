@@ -26,5 +26,4 @@ Step 5: You can now open project folder in your editor
 Step 6: Run Development server
     $ python manage.py runserver
 
-Now you can modify the code and data
-Make better design to make your project more stunning. 
+Now website can be run locally.
